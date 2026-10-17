@@ -1,0 +1,232 @@
+/* Rendang Pak Nil · Concept B "Ingat Rendang, Ingat Pak Nil!" · base: tokens, reset, type, buttons, shapes.
+   Raya-pop palette: pale banana-leaf canvas, kuali-black ink (the black pouches), chilli red for actions,
+   turmeric yellow, ketupat green and lada maroon; each product's label colour drives its own scenes.
+   Type: Ultra (fat slab, like the chalky slab lettering on the packs), Figtree (body), Caveat Brush (notes). */
+:root {
+  --daun: #EEF3D6;
+  --daun-2: #DFE9BC;
+  --paper: #FFFDF4;
+  --kunyit: #FFB51F;
+  --kunyit-deep: #E59400;
+  --kunyit-soft: #FFE3A3;
+  --cili: #E3262E;
+  --cili-deep: #B5121B;
+  --ketupat: #2A8540;
+  --ketupat-deep: #1D5B2C;
+  --lada: #7C0C1B;
+  --sky: #2F6FDB;
+  --ink: #1E1410;
+  --ink-2: #4A3A2E;
+  --ink-3: #6F6052;
+  --line: rgba(30, 20, 16, .16);
+
+  --f-display: 'Ultra', 'Rockwell Extra Bold', 'Rockwell', Georgia, serif;
+  --f-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-hand: 'Caveat Brush', 'Segoe Print', 'Comic Sans MS', cursive;
+
+  --jelly: cubic-bezier(.34, 1.56, .64, 1);
+  --out: cubic-bezier(.16, 1, .3, 1);
+  --in-out: cubic-bezier(.65, 0, .35, 1);
+
+  --r-s: 14px;
+  --r-m: 22px;
+  --r-l: 32px;
+  --r-xl: 46px;
+  --hard: 0 6px 0 var(--ink);
+  --hard-s: 0 4px 0 var(--ink);
+  --soft: 0 30px 50px -28px rgba(30, 20, 16, .5);
+  --wrap: 1260px;
+  --gut: clamp(16px, 4.2vw, 44px);
+  --header-h: 90px;
+  --topbar-h: 38px;
+  --weave: repeating-linear-gradient(45deg, rgba(30, 20, 16, .065) 0 2px, transparent 2px 26px), repeating-linear-gradient(-45deg, rgba(30, 20, 16, .065) 0 2px, transparent 2px 26px);
+}
+
+@media (min-width: 1600px) { :root { --wrap: 1380px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 120px; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+body {
+  margin: 0;
+  font: 400 17px/1.6 var(--f-body);
+  color: var(--ink);
+  background: var(--daun);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* lock the viewport only: overflow on body would make it a scroll container and unstick the header */
+html.is-locked { overflow: hidden; }
+img, svg, video, canvas { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+input, select, textarea { font: inherit; color: inherit; }
+h1, h2, h3, h4, p, ul, ol, figure, blockquote, dl, dd { margin: 0; }
+ul[class], ol[class] { list-style: none; padding: 0; }
+[hidden] { display: none !important; }
+::selection { background: var(--kunyit); color: var(--ink); }
+:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; border-radius: 6px; }
+.skip { position: fixed; left: 16px; top: -60px; z-index: 200; padding: 10px 16px; border-radius: 999px; background: var(--ink); color: var(--paper); font-weight: 700; transition: top .2s; }
+.skip:focus { top: 12px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* ------------------------------------------------------------ layout */
+.wrap { width: min(100% - var(--gut) * 2, var(--wrap)); margin-inline: auto; }
+.section { position: relative; padding-block: clamp(72px, 10vw, 140px); }
+/* the ketupat weave: a fine diagonal lattice, like woven palm leaves */
+.weave { background-image: var(--weave); }
+
+/* -------------------------------------------------------------- type */
+.d-hero, .d-1, .d-2, .d-3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+.d-hero { font-size: clamp(40px, 4.9vw, 78px); line-height: 1; }
+.d-1 { font-size: clamp(36px, 4.4vw, 72px); }
+.d-2 { font-size: clamp(31px, 3.7vw, 58px); }
+.d-3 { font-size: clamp(25px, 2.4vw, 38px); line-height: 1.05; }
+.h-card { font: 400 clamp(21px, 1.8vw, 27px)/1.05 var(--f-display); letter-spacing: -.005em; }
+.lead { font-size: clamp(18px, 1.45vw, 21px); line-height: 1.55; color: var(--ink-2); max-width: 36em; }
+.note { font-family: var(--f-hand); font-size: clamp(24px, 2.2vw, 31px); line-height: 1.1; color: var(--cili); }
+.small { font-size: 14px; line-height: 1.5; color: var(--ink-3); }
+.ltr { display: inline-block; will-change: transform; }
+.word { display: inline-block; white-space: nowrap; }
+p { text-wrap: pretty; }
+
+/* ----------------------------------------------------------- buttons */
+.btn {
+  --b: var(--kunyit);
+  --bfg: var(--ink);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55em;
+  padding: .92em 1.45em;
+  border: 2.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--b);
+  color: var(--bfg);
+  font: 700 17px/1 var(--f-body);
+  white-space: nowrap;
+  box-shadow: var(--hard-s);
+  transition: translate .45s var(--jelly), rotate .45s var(--jelly), box-shadow .25s ease, background-color .25s;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn .icon { width: 1.2em; height: 1.2em; flex: none; }
+.btn:hover { translate: 0 -3px; rotate: -1.2deg; box-shadow: 0 7px 0 var(--ink); }
+.btn:active { translate: 0 3px; rotate: 0deg; box-shadow: 0 1px 0 var(--ink); transition-duration: .08s; }
+.btn--cili { --b: var(--cili); --bfg: #fff; }
+.btn--white { --b: var(--paper); }
+.btn--green { --b: var(--ketupat); --bfg: #fff; }
+.btn--kunyit { --b: var(--kunyit); }
+.btn--ghost { --b: transparent; box-shadow: none; }
+.btn--ghost:hover { box-shadow: var(--hard-s); --b: var(--paper); }
+.btn--sm { padding: .7em 1.1em; font-size: 15px; }
+.btn--lg { padding: 1.05em 1.8em; font-size: 19px; }
+.btn--block { width: 100%; }
+@keyframes jelly {
+  0% { scale: 1 1; }
+  30% { scale: 1.12 .88; }
+  45% { scale: .92 1.08; }
+  60% { scale: 1.04 .96; }
+  75% { scale: .98 1.02; }
+  100% { scale: 1 1; }
+}
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2.5px solid var(--ink);
+  background: var(--paper);
+  box-shadow: var(--hard-s);
+  transition: translate .45s var(--jelly), rotate .45s var(--jelly), box-shadow .2s;
+}
+.icon-btn .icon { width: 20px; height: 20px; }
+.icon-btn:hover { translate: 0 -2px; rotate: -6deg; }
+.icon-btn:active { translate: 0 3px; box-shadow: 0 1px 0 var(--ink); }
+.link { display: inline-flex; align-items: center; gap: .4em; font-weight: 700; color: var(--cili-deep); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.link:hover { color: var(--lada); text-decoration-style: wavy; }
+.link .icon { width: 18px; height: 18px; }
+.link-btn { font-size: 14px; color: var(--ink-3); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ------------------------------------------------------------ chips */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  padding: .5em .95em;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.1;
+  transition: translate .4s var(--jelly), rotate .4s var(--jelly), background-color .2s, color .2s;
+}
+.chip .icon { width: 16px; height: 16px; flex: none; }
+button.chip:hover, a.chip:hover { translate: 0 -2px; rotate: -2deg; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--kunyit); }
+
+/* ----------------------------------------------------------- shapes */
+.tape::before {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  top: -14px;
+  left: 50%;
+  width: 96px;
+  height: 28px;
+  translate: -50% 0;
+  rotate: var(--tape-r, -4deg);
+  background: rgba(255, 181, 31, .8);
+  box-shadow: 0 2px 6px rgba(30, 20, 16, .18);
+  clip-path: polygon(3% 0, 97% 4%, 100% 50%, 96% 100%, 2% 96%, 0 50%);
+}
+.wave {
+  position: relative;
+  z-index: 2;
+  height: clamp(28px, 4vw, 56px);
+  margin-block: -1px;
+  background: var(--wave, var(--kunyit));
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 32C120 8 240 8 360 30s240 26 360 4 240-28 360-6 240 30 360 6v26H0Z'/%3E%3C/svg%3E") 0 100% / 1440px 100% repeat-x;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 32C120 8 240 8 360 30s240 26 360 4 240-28 360-6 240 30 360 6v26H0Z'/%3E%3C/svg%3E") 0 100% / 1440px 100% repeat-x;
+  animation: wave-drift 26s linear infinite;
+}
+.wave--flip { transform: scaleY(-1); }
+@keyframes wave-drift { to { -webkit-mask-position: 1440px 100%; mask-position: 1440px 100%; } }
+
+/* ------------------------------------------------------------ forms */
+.field { display: grid; gap: 6px; align-content: start; }
+.field label { font-weight: 600; font-size: 15px; }
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2.5px solid var(--ink);
+  border-radius: var(--r-s);
+  background: var(--paper);
+  font-size: 16px;
+  transition: box-shadow .2s, border-color .2s;
+}
+.field select { appearance: none; -webkit-appearance: none; padding-right: 40px; background: var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%231E1410' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 16px center; }
+.field textarea { min-height: 120px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; box-shadow: 0 0 0 4px rgba(47, 111, 219, .25); border-color: var(--sky); }
+.field [aria-invalid="true"] { border-color: var(--cili); box-shadow: 0 0 0 4px rgba(227, 38, 46, .18); }
+.field-error { color: #B42318; font-size: 14px; font-weight: 600; }
+
+/* ---------------------------------------------------- motion gating */
+.js [data-pop], .js [data-split] { opacity: 0; }
+.fx-failed [data-pop], .fx-failed [data-split] { opacity: 1 !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .js [data-pop], .js [data-split] { opacity: 1; }
+}

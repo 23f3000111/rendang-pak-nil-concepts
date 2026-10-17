@@ -1,0 +1,175 @@
+<!--{"title": "Contact, agents and kenduri orders | Rendang Pak Nil", "description": "Contact Rendang Pak Nil in Batu Caves: WhatsApp +60 11-6982 5208, rendangwarisanistana@gmail.com. Apply to be an agent or plan a kenduri order; every form opens a ready-made WhatsApp message.", "bodyClass": "page-contact", "scripts": ["scenes"]}-->
+<section class="chero" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="chero__head">
+      <h1 class="d-1" id="contact-title" data-split>Jom borak!</h1>
+      <p class="note">Order, ask, or become an agent</p>
+    </div>
+    <div class="ccards">
+      <a class="ccard ccard--wa" href="https://wa.me/601169825208" target="_blank" rel="noopener" data-pop>
+        <span class="ccard__icon"><i data-icon="whatsapp"></i></span><strong>WhatsApp</strong><span>The fastest way to order or ask. The kitchen replies in the chat.</span><span class="ccard__go">Open chat<i data-icon="arrow-up-right"></i></span>
+      </a>
+      <a class="ccard" href="tel:+601169825208" data-pop>
+        <span class="ccard__icon"><i data-icon="phone"></i></span><strong>Call</strong><span>+60 11-6982 5208</span><span class="ccard__go">Call now<i data-icon="arrow-up-right"></i></span>
+      </a>
+      <a class="ccard" href="mailto:rendangwarisanistana@gmail.com" data-pop>
+        <span class="ccard__icon"><i data-icon="mail"></i></span><strong>E-mail</strong><span>rendangwarisanistana@gmail.com</span><span class="ccard__go">Write to us<i data-icon="arrow-up-right"></i></span>
+      </a>
+      <a class="ccard" href="https://www.google.com/maps/search/?api=1&amp;query=No+2+Jalan+2%2F12+Bandar+Baru+Selayang+68100+Batu+Caves" target="_blank" rel="noopener" data-pop>
+        <span class="ccard__icon"><i data-icon="pin"></i></span><strong>Visit</strong><span>No 2 Jalan 2/12, Bandar Baru Selayang, 68100 Batu Caves</span><span class="ccard__go">Get directions<i data-icon="arrow-up-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="forms section" aria-labelledby="forms-title">
+  <div class="wrap">
+    <h2 class="d-2" id="forms-title" data-split>Apa yang boleh kami bantu?</h2>
+    <div class="forms__box" data-tabs>
+      <div class="forms__tabs" role="tablist" aria-label="Choose a form">
+        <button type="button" role="tab" id="tab-hello" aria-controls="hello" aria-selected="true"><i data-icon="message"></i>Say hello</button>
+        <button type="button" role="tab" id="tab-agent" aria-controls="agent" aria-selected="false" tabindex="-1"><i data-icon="store"></i>Become an agent</button>
+        <button type="button" role="tab" id="tab-bulk" aria-controls="bulk" aria-selected="false" tabindex="-1"><i data-icon="utensils"></i>Kenduri and bulk orders</button>
+      </div>
+
+      <div class="forms__panel" id="hello" role="tabpanel" aria-labelledby="tab-hello">
+        <form class="form" data-form="hello">
+          <p class="form__intro">Questions, feedback or a rendang emergency? Your message opens in WhatsApp, ready to send.</p>
+          <div class="form__grid">
+            <div class="field"><label for="h-name">Your name</label><input id="h-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="h-phone">Phone (optional)</label><input id="h-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field field--full"><label for="h-email">E-mail (optional)</label><input id="h-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field field--full"><label for="h-msg">Message</label><textarea id="h-msg" name="message" required></textarea></div>
+          </div>
+          <fieldset class="channel"><legend>Send with</legend><label><input type="radio" name="channel" value="whatsapp" checked> WhatsApp</label><label><input type="radio" name="channel" value="email"> E-mail</label></fieldset>
+          <button class="btn btn--cili btn--lg" type="submit"><i data-icon="send"></i>Send message</button>
+          <p class="form__done" data-form-done hidden>Your message is ready in a new tab. Nothing opened? <a class="link" href="https://wa.me/601169825208" target="_blank" rel="noopener">Open it again</a>.</p>
+        </form>
+      </div>
+
+      <div class="forms__panel" id="agent" role="tabpanel" aria-labelledby="tab-agent" hidden>
+        <form class="form" data-form="agent">
+          <p class="form__intro">Rumpun Selera is looking for agents to bring Rendang Pak Nil to more freezers. Tell the team about you; they reply on WhatsApp with the agent prices and terms.</p>
+          <div class="form__grid">
+            <div class="field"><label for="a-name">Your name</label><input id="a-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="a-phone">WhatsApp number</label><input id="a-phone" name="phone" type="tel" autocomplete="tel" placeholder="+60 1x-xxx xxxx" required></div>
+            <div class="field"><label for="a-area">Your area</label>
+              <select id="a-area" name="area" required>
+                <option value="">Choose one</option>
+                <option>Klang Valley</option>
+                <option>Selangor, outside the Klang Valley</option>
+                <option>Negeri Sembilan or Melaka</option>
+                <option>Johor</option>
+                <option>Perak or the north</option>
+                <option>East coast</option>
+                <option>Sabah or Sarawak</option>
+                <option>Somewhere else</option>
+              </select>
+            </div>
+            <div class="field"><label for="a-channel">How you would sell</label>
+              <select id="a-channel" name="sell" required>
+                <option value="">Choose one</option>
+                <option>Reseller or dropship</option>
+                <option>Kedai runcit or frozen-food shop</option>
+                <option>Office or community buyer</option>
+                <option>Kenduri or catering</option>
+              </select>
+            </div>
+            <div class="field"><label for="a-freezer">Freezer space</label>
+              <select id="a-freezer" name="freezer">
+                <option>A chest freezer</option>
+                <option>A small freezer</option>
+                <option>Not yet</option>
+              </select>
+            </div>
+            <div class="field"><label for="a-volume">Packs a month, roughly</label>
+              <select id="a-volume" name="volume">
+                <option>Not sure yet</option>
+                <option>About 10 to 20</option>
+                <option>20 to 50</option>
+                <option>More than 50</option>
+              </select>
+            </div>
+            <div class="field field--full"><label for="a-note">Anything else? (optional)</label><textarea id="a-note" name="note" placeholder="Where your customers are, when you would like to start"></textarea></div>
+          </div>
+          <fieldset class="channel"><legend>Send with</legend><label><input type="radio" name="channel" value="whatsapp" checked> WhatsApp</label><label><input type="radio" name="channel" value="email"> E-mail</label></fieldset>
+          <button class="btn btn--green btn--lg" type="submit"><i data-icon="send"></i>Send my application</button>
+          <p class="form__done" data-form-done hidden>Your application is ready in a new tab. Nothing opened? <a class="link" href="https://wa.me/601169825208" target="_blank" rel="noopener">Open it again</a>.</p>
+        </form>
+      </div>
+
+      <div class="forms__panel" id="bulk" role="tabpanel" aria-labelledby="tab-bulk" hidden>
+        <form class="form" data-form="bulk">
+          <p class="form__intro">Feeding a crowd? Rumpun Selera has catered since 2001. Tell the team your date, headcount and menus, and they reply with the order and price.</p>
+          <div class="form__grid">
+            <div class="field"><label for="b-event">The occasion</label>
+              <select id="b-event" name="event" required>
+                <option value="">Choose one</option>
+                <option>Kenduri kahwin</option>
+                <option>Rumah terbuka Raya</option>
+                <option>Tahlil or doa selamat</option>
+                <option>Office or corporate</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field"><label for="b-date">Date</label><input id="b-date" name="date" placeholder="e.g. Saturday 12 April" required></div>
+            <div class="field field--full guests">
+              <label for="b-guests">How many guests?</label>
+              <div class="guests__row"><input id="b-guests" name="guests" type="number" min="10" max="3000" step="10" value="100" data-guests required><output class="guests__out" for="b-guests" data-guests-out>100 guests</output></div>
+              <p class="guests__est"><i data-icon="package"></i><span>Roughly <b data-estimate>13 to 25 packs of 1 kg</b> of rendang, going by the kitchen’s “one pack serves 2 to 4”. The team will confirm.</span></p>
+            </div>
+          </div>
+          <fieldset class="skus" data-require-one>
+            <legend>Which menus? (1 kg packs)</legend>
+            <div class="skus__grid">
+              <label class="sku" style="--c-pop:#2F6FDB"><input type="checkbox" name="menu" value="minang"><span>Rendang Minang Pak Nil</span></label>
+              <label class="sku" style="--c-pop:#F2B705"><input type="checkbox" name="menu" value="dendeng"><span>Rendang Dendeng Perak</span></label>
+              <label class="sku" style="--c-pop:#7B2FA3"><input type="checkbox" name="menu" value="daging"><span>Rendang Daging</span></label>
+              <label class="sku" style="--c-pop:#3FA535"><input type="checkbox" name="menu" value="ayam"><span>Rendang Ayam</span></label>
+              <label class="sku" style="--c-pop:#F0761D"><input type="checkbox" name="menu" value="paru"><span>Rendang Paru</span></label>
+              <label class="sku" style="--c-pop:#C2297A"><input type="checkbox" name="menu" value="ayam-special"><span>Rendang Ayam Special</span></label>
+              <label class="sku" style="--c-pop:#DA2A2A"><input type="checkbox" name="menu" value="sambal"><span>Kuah Sambal Serbaguna</span></label>
+              <label class="sku" style="--c-pop:#2B3BA6"><input type="checkbox" name="menu" value="laksa"><span>Kuah Laksa Johor</span></label>
+              <label class="sku" style="--c-pop:#8C5A3C"><input type="checkbox" name="menu" value="kacang"><span>Kuah Kacang</span></label>
+            </div>
+            <p class="field-error" data-require-one-error hidden>Tick at least one menu.</p>
+          </fieldset>
+          <div class="form__grid">
+            <div class="field"><label for="b-area">Deliver to</label><input id="b-area" name="area" placeholder="Town or area" required></div>
+            <div class="field"><label for="b-name">Your name</label><input id="b-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="b-email">E-mail (optional)</label><input id="b-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field field--full"><label for="b-note">Anything else? (optional)</label><textarea id="b-note" name="note" placeholder="Other dishes on the menu, delivery time, budget"></textarea></div>
+          </div>
+          <fieldset class="channel"><legend>Send with</legend><label><input type="radio" name="channel" value="whatsapp" checked> WhatsApp</label><label><input type="radio" name="channel" value="email"> E-mail</label></fieldset>
+          <button class="btn btn--cili btn--lg" type="submit"><i data-icon="send"></i>Send kenduri enquiry</button>
+          <p class="form__done" data-form-done hidden>Your enquiry is ready in a new tab. Nothing opened? <a class="link" href="https://wa.me/601169825208" target="_blank" rel="noopener">Open it again</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find section" aria-labelledby="find-title">
+  <div class="wrap find__grid">
+    <div class="find__copy">
+      <h2 class="d-2" id="find-title" data-split>Dapur kami</h2>
+      <p class="lead">Rumpun Selera Enterprise, No 2 Jalan 2/12, Bandar Baru Selayang, 68100 Batu Caves, Selangor.</p>
+      <ul class="find__lines">
+        <li><i data-icon="whatsapp"></i><span><b>Orders and enquiries</b><a href="https://wa.me/601169825208" target="_blank" rel="noopener">+60 11-6982 5208</a></span></li>
+        <li><i data-icon="message"></i><span><b>Instagram order line</b><a href="https://wa.me/601160975809" target="_blank" rel="noopener">+60 11-6097 5809</a></span></li>
+        <li><i data-icon="phone"></i><span><b>On their Facebook page</b><a href="tel:+60137070013">+60 13-707 0013</a></span></li>
+      </ul>
+      <div class="socials socials--big">
+        <a href="https://www.facebook.com/rendangpaknil" target="_blank" rel="noopener" aria-label="Facebook"><i data-icon="facebook"></i></a>
+        <a href="https://www.instagram.com/rendangpaknil" target="_blank" rel="noopener" aria-label="Instagram"><i data-icon="instagram"></i></a>
+        <a href="https://www.tiktok.com/@rendangpaknil" target="_blank" rel="noopener" aria-label="TikTok"><i data-icon="tiktok"></i></a>
+        <a href="https://wa.me/601169825208" target="_blank" rel="noopener" aria-label="WhatsApp"><i data-icon="whatsapp"></i></a>
+      </div>
+      <button class="link-btn" type="button" data-copy="rendangwarisanistana@gmail.com">Copy our e-mail address</button>
+    </div>
+    <div class="find__map">
+      <iframe title="Map: Rumpun Selera, Bandar Baru Selayang, Batu Caves" src="https://www.google.com/maps?q=Jalan+2%2F12,+Bandar+Baru+Selayang,+68100+Batu+Caves,+Selangor&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

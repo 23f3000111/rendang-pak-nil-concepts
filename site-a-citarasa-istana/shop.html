@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Shop | Rendang Pak Nil (concept)</title>
+  <meta name="description" content="All nine Rendang Pak Nil menus: Rendang Minang, Dendeng Perak, Daging, Ayam, Paru and Ayam Special, plus Kuah Sambal, Laksa Johor and Kuah Kacang.">
+  <meta name="theme-color" content="#5C0F1F">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
+  <link rel="preload" href="assets/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="shop">
+  <script src="assets/js/icons.js"></script>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Shop</span></nav>
+        <h1 class="h1" data-en="Nine menus, one freezer." data-ms="Sembilan menu, satu peti sejuk.">Nine menus, one freezer.</h1>
+        <p class="lede" data-en="Six rendang and three kuah, cooked in Rumpun Selera’s kitchen and frozen at their best. Thaw, heat, serve." data-ms="Enam rendang dan tiga kuah, dimasak di dapur Rumpun Selera dan dibekukan. Nyahbeku, panaskan, hidang.">Six rendang and three kuah, cooked in Rumpun Selera’s kitchen and frozen at their best. Thaw, heat, serve.</p>
+        <p class="ship-note"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg><span data-en="Free frozen delivery in the Klang Valley over RM150 (proposed)" data-ms="Penghantaran beku percuma di Lembah Klang melebihi RM150 (cadangan)">Free frozen delivery in the Klang Valley over RM150 (proposed)</span></p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:0" aria-label="All menus">
+      <div class="wrap">
+        <div class="toolbar">
+          <div class="chips" role="group" aria-label="Filter">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All nine</button>
+            <button class="chip" type="button" data-filter="rendang" aria-pressed="false">Rendang</button>
+            <button class="chip" type="button" data-filter="kuah" aria-pressed="false">Kuah</button>
+            <button class="chip" type="button" data-filter="beef" aria-pressed="false">Daging</button>
+            <button class="chip" type="button" data-filter="chicken" aria-pressed="false">Ayam</button>
+            <button class="chip" type="button" data-filter="offal" aria-pressed="false">The special bits</button>
+            <button class="chip" type="button" data-filter="1000" aria-pressed="false">1 kg packs</button>
+          </div>
+          <label class="chip" style="gap:10px">Sort
+            <select id="sort" style="border:0;background:none;font:inherit;font-weight:700;color:inherit">
+              <option value="featured">Featured</option><option value="price-asc">Price, low to high</option><option value="price-desc">Price, high to low</option>
+            </select>
+          </label>
+        </div>
+        <div class="product-grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="set" style="background:var(--kertas-2);border-block:1.5px solid var(--line)" aria-labelledby="set-title">
+      <div class="wrap">
+        <div class="sec-head"><div><p class="accent accent--md" data-en="Build a Raya set" data-ms="Bina set Raya">Build a Raya set</p><h2 class="h2" id="set-title" data-en="Any three packs. 5% off the set." data-ms="Mana-mana tiga pek. Jimat 5%.">Any three packs. 5% off the set.</h2></div>
+          <p class="lede" style="max-width:42ch" data-en="Rendang for the table, kuah for the ketupat. A proposed set offer; Rumpun Selera sets the real one." data-ms="Rendang untuk hidangan, kuah untuk ketupat. Cadangan tawaran; Rumpun Selera tetapkan harga sebenar.">Rendang for the table, kuah for the ketupat. A proposed set offer; Rumpun Selera sets the real one.</p></div>
+        <div class="builder">
+          <div class="builder__pick" id="pick"></div>
+          <aside class="builder__box" aria-live="polite">
+            <span class="tag tag--gold" style="justify-self:start">Proposed offer</span>
+            <h3 class="h3" id="b-count">0 of 3 picked</h3>
+            <div class="slots" id="slots"></div>
+            <div class="builder__total"><div><span class="small">Set price</span><br><b id="b-price">RM0.00</b></div><div style="text-align:right"><s id="b-was"></s><br><span class="save" id="b-save"></span></div></div>
+            <button class="btn btn--gold" type="button" id="b-add" disabled>Add the set to cart</button>
+            <button class="btn-thread btn-thread--light" type="button" id="b-fill">Fill with Pak Nil’s pick</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="boxes" aria-labelledby="boxes-title">
+      <div class="wrap">
+        <div class="sec-head"><div><p class="accent accent--md" data-en="Kenduri and gift boxes" data-ms="Kotak kenduri dan hadiah">Kenduri and gift boxes</p><h2 class="h2" id="boxes-title" data-en="A box for every big table." data-ms="Kotak untuk setiap meja besar.">A box for every big table.</h2></div>
+          <p class="lede" style="max-width:42ch" data-en="Ready-made boxes for Raya, kenduri and corporate gifts. The team confirms the price and date on WhatsApp." data-ms="Kotak sedia untuk Raya, kenduri dan hadiah korporat. Harga dan tarikh disahkan di WhatsApp.">Ready-made boxes for Raya, kenduri and corporate gifts. The team confirms the price and date on WhatsApp.</p></div>
+        <div class="feature-cards" id="box-cards"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="stock-up" aria-labelledby="stock-title">
+      <div class="wrap">
+        <div class="club" style="background:var(--istana)">
+          <div class="club__copy">
+            <span class="tag tag--gold" style="justify-self:start">Proposal</span>
+            <h2 class="h2" id="stock-title" style="color:var(--kertas)" data-en="Four packs a month. 10% off. Skip any time." data-ms="Empat pek sebulan. Jimat 10%. Langkau bila-bila masa.">Four packs a month. 10% off. Skip any time.</h2>
+            <p data-en="Two Rendang Minang, one Daging and one Ayam (500 g each) to start; change them, pause or cancel from your account." data-ms="Dua Rendang Minang, satu Daging dan satu Ayam (500 g) untuk mula; tukar, berhenti sementara atau batal dari akaun anda.">Two Rendang Minang, one Daging and one Ayam (500 g each) to start; change them, pause or cancel from your account.</p>
+            <div class="club__form"><span class="fl-price" style="color:var(--emas)" id="sub-price">RM0.00</span><button class="btn btn--gold" type="button" id="sub-btn">Start my stock-up</button></div>
+          </div>
+          <div class="club__media" style="background:var(--istana-2);display:grid;place-items:center"><img src="assets/img/photos/range-paknil.webp" alt="All nine Rendang Pak Nil packs on a batik table, with Pak Nil" loading="lazy" style="position:static;width:100%;height:100%;object-fit:cover"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/vendor/qrcode.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/chat.js"></script>
+  <script src="assets/js/shop.js"></script>
+</body>
+</html>

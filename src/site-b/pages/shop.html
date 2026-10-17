@@ -1,0 +1,89 @@
+<!--{"title": "Shop rendang | Rendang Pak Nil", "description": "Shop Rendang Pak Nil: six frozen rendangs and three ready kuah in 500 g and 1 kg packs, plus a Set Pagi Raya. Fill your bag and send the order on WhatsApp.", "bodyClass": "page-shop", "scripts": ["scenes"]}-->
+<section class="shop-hero" aria-labelledby="shop-title">
+  <div class="wrap">
+    <div class="shop-hero__card weave">
+      <div class="shop-hero__copy">
+        <h1 class="d-1" id="shop-title" data-split>Pilih, panas, hidang.</h1>
+        <p class="note">Pick it, heat it, serve it</p>
+        <p class="lead">Six rendangs and three ready kuah, frozen in 500 g and 1 kg packs. Fill your bag, then send the order to the kitchen on WhatsApp.</p>
+        <ul class="shop-hero__chips">
+          <li class="chip"><i data-icon="moon"></i>Produk Keluaran Muslim</li>
+          <li class="chip"><i data-icon="shield-check"></i>BeSS</li>
+          <li class="chip"><i data-icon="snowflake"></i>Simpan sejukbeku</li>
+          <li class="chip"><i data-icon="clock"></i>Siap 5 minit</li>
+        </ul>
+      </div>
+      <div class="shop-hero__art">
+        <div class="shop-hero__fan">
+          <button class="shop-hero__pack" type="button" data-quick="kacang-1000" style="--r:-16deg;--x:-104%" aria-label="Quick view: Kuah Kacang"><img src="assets/img/packs/kacang-sm.webp" alt="Kuah Kacang pack" width="391" height="560"></button>
+          <button class="shop-hero__pack" type="button" data-quick="ayam-500" style="--r:-8deg;--x:-78%" aria-label="Quick view: Rendang Ayam"><img src="assets/img/packs/ayam-sm.webp" alt="Rendang Ayam pack" width="391" height="560"></button>
+          <button class="shop-hero__pack" type="button" data-quick="sambal-1000" style="--r:16deg;--x:4%" aria-label="Quick view: Kuah Sambal Serbaguna"><img src="assets/img/packs/sambal-sm.webp" alt="Kuah Sambal Serbaguna pack" width="378" height="560"></button>
+          <button class="shop-hero__pack" type="button" data-quick="dendeng-1000" style="--r:8deg;--x:-22%" aria-label="Quick view: Rendang Dendeng Perak"><img src="assets/img/packs/dendeng-sm.webp" alt="Rendang Dendeng Perak pack" width="373" height="560"></button>
+          <button class="shop-hero__pack shop-hero__pack--lead" type="button" data-quick="minang-500" style="--r:0deg;--x:-50%" aria-label="Quick view: Rendang Minang Pak Nil"><img src="assets/img/packs/minang-sm.webp" alt="Rendang Minang Pak Nil pack" width="365" height="560"></button>
+        </div>
+        <img class="shop-hero__spice shop-hero__spice--1" src="assets/img/spices/chilli.webp" alt="" width="360" height="103" data-float="12">
+        <img class="shop-hero__spice shop-hero__spice--2" src="assets/img/spices/anise.webp" alt="" width="353" height="360" data-float="16">
+        <img class="shop-hero__spice shop-hero__spice--3" src="assets/img/spices/cinnamon.webp" alt="" width="360" height="258" data-float="10">
+        <span class="shop-hero__badge" data-float="8"><small>from</small><b>RM28</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shop section" aria-labelledby="grid-title">
+  <div class="wrap">
+    <div class="shop__bar" data-filters="#shop-grid">
+      <h2 class="sr" id="grid-title">All Rendang Pak Nil menus</h2>
+      <div class="shop__filters" role="group" aria-label="Show">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="rendang" aria-pressed="false"><i data-icon="chilli"></i>Rendang</button>
+        <button class="chip" type="button" data-filter="kuah" aria-pressed="false"><i data-icon="bowl"></i>Kuah</button>
+        <button class="chip" type="button" data-filter="beef" aria-pressed="false">Daging</button>
+        <button class="chip" type="button" data-filter="chicken" aria-pressed="false">Ayam</button>
+        <button class="chip" type="button" data-filter="offal" aria-pressed="false">Paru and the special bits</button>
+        <button class="chip" type="button" data-filter="500" aria-pressed="false">500 g</button>
+        <button class="chip" type="button" data-filter="1000" aria-pressed="false">1 kg</button>
+        <button class="chip" type="button" data-filter="bundle" aria-pressed="false"><i data-icon="gift"></i>Raya set</button>
+      </div>
+      <div class="shop__sort">
+        <label for="shop-sort">Sort by</label>
+        <select id="shop-sort" data-sort>
+          <option value="popular">Pak Nil’s order</option>
+          <option value="price-asc">Price, low to high</option>
+          <option value="price-desc">Price, high to low</option>
+        </select>
+      </div>
+      <p class="shop__count" data-count-shown aria-live="polite">10 products</p>
+    </div>
+    <div class="pgrid pgrid--shop" id="shop-grid" data-products="all"></div>
+    <p class="small shop__note">Prices are from rendangpaknil.com. *The Set Pagi Raya price is a proposal for Rumpun Selera to confirm.</p>
+
+    <aside class="trade-card" aria-labelledby="trade-card-title">
+      <div class="trade-card__art"><img src="assets/img/photos/range-table.webp" alt="All nine Rendang Pak Nil packs on a table of rendang dishes" width="1344" height="768" loading="lazy"></div>
+      <div class="trade-card__body">
+        <h2 class="d-3" id="trade-card-title">Buying for a kenduri or a shop?</h2>
+        <p>The 1 kg packs feed a crowd, and Rumpun Selera is looking for agents. Tell the team what you need and they reply with prices on WhatsApp.</p>
+        <div class="trade-card__btns">
+          <a class="btn btn--green" href="contact.html#bulk"><i data-icon="utensils"></i>Kenduri order</a>
+          <a class="btn btn--white" href="contact.html#agent"><i data-icon="store"></i>Become an agent</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="howto section" aria-labelledby="howto-title">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="d-1" id="howto-title" data-split>Cara pesan</h2>
+      <p class="note">How ordering works</p>
+      <p class="lead">No account and no checkout forms. Your order goes straight to the kitchen on WhatsApp.</p>
+    </header>
+    <ol class="steps">
+      <li class="step" data-pop><span class="step__n">1</span><h3 class="h-card">Fill your bag</h3><p>Pick your rendang and the size. Your bag remembers it on this device.</p></li>
+      <li class="step" data-pop><span class="step__n">2</span><h3 class="h-card">Send it on WhatsApp</h3><p>Tap “Order on WhatsApp” and the order arrives as a ready-made message to +60 11-6982 5208.</p></li>
+      <li class="step" data-pop><span class="step__n">3</span><h3 class="h-card">Thaw, heat, serve</h3><p>The team confirms payment and frozen delivery for your area. Then it is five minutes to the table.</p></li>
+    </ol>
+    <p class="howto__alt">Rather talk? <a class="link" href="tel:+601169825208"><i data-icon="phone"></i>Call +60 11-6982 5208</a> or WhatsApp the order line <a class="link" href="https://wa.me/601160975809" target="_blank" rel="noopener">+60 11-6097 5809</a>.</p>
+  </div>
+</section>

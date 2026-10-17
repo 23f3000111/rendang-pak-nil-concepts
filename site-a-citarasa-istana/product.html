@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Rendang Minang Pak Nil | Rendang Pak Nil (concept)</title>
+  <meta name="description" content="Rendang Pak Nil product page concept: sizes, prices, how to heat, serving ideas and customer testimonials.">
+  <meta name="theme-color" content="#5C0F1F">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="shop">
+  <script src="assets/js/icons.js"></script>
+
+  <main id="main" class="pdp">
+    <section class="page-head" style="padding-bottom:20px">
+      <div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="shop.html">Shop</a><span aria-hidden="true">/</span><span id="crumb">Rendang Minang</span></nav></div>
+    </section>
+
+    <section class="section" style="padding-top:10px">
+      <div class="wrap pdp__grid">
+        <div class="gallery">
+          <div class="gallery__main" id="g-main"></div>
+          <div class="gallery__thumbs" id="g-thumbs" role="group" aria-label="Product images"></div>
+        </div>
+
+        <div class="pdp__info">
+          <div class="pdp__title">
+            <span class="tag tag--gold" id="p-badge" style="justify-self:start" hidden></span>
+            <h1 class="h1" id="p-name">Rendang Minang Pak Nil</h1>
+            <p class="accent accent--md" id="p-en">Minang-style beef rendang</p>
+            <a class="small" href="#reviews" id="p-rev" style="display:inline-flex;gap:8px;align-items:center;font-weight:700;color:var(--istana)" hidden><span class="stars" style="display:inline-flex;color:var(--emas)" id="p-stars"></span><span id="p-rev-n"></span></a>
+          </div>
+          <div class="pdp__price"><b id="p-price">RM48.00</b><span class="small muted" id="p-size-note"></span></div>
+          <div class="sizes" id="p-sizes" role="group" aria-label="Pack size"></div>
+          <p class="lede" id="p-line"></p>
+          <div id="p-facts"></div>
+          <div class="notes" id="p-notes"></div>
+          <div class="buy-row" id="buy-row">
+            <div class="qty"><button type="button" data-pq="-1" aria-label="Fewer"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></button><output id="p-qty">1</output><button type="button" data-pq="1" aria-label="More"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+            <button class="btn" type="button" id="p-add"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg><span data-i18n="fl.add">Add to cart</span></button>
+            <button class="btn-thread" type="button" data-chat-open>Ask the kitchen</button>
+          </div>
+          <div class="upsell"><img src="assets/img/packs/kacang-sm.webp" alt="" width="50"><div><b>Raya set:</b> this plus any two packs, 5% off (proposed offer). <a href="shop.html#set" style="font-weight:700">Build a set</a></div></div>
+          <div class="trade">
+            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <p><b>Feeding a kenduri?</b><span id="p-trade">The 1 kg packs are made for big tables, and agents get their own prices.</span></p>
+            <a class="btn btn--sm btn--gold" href="agent.html#kenduri">Bulk orders</a>
+          </div>
+          <div class="acc" id="p-acc"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--kertas-2);border-block:1.5px solid var(--line)" aria-labelledby="serve-title">
+      <div class="wrap split">
+        <div class="reel-frame" id="reel"></div>
+        <div class="stack" style="--gap:26px">
+          <div><p class="accent accent--md">Serve it tonight</p><h2 class="h2" id="serve-title">Raya morning plate</h2></div>
+          <div><h3 class="h3" style="margin-bottom:14px">You’ll need</h3><ul class="need-list" id="need"></ul></div>
+          <div><h3 class="h3" style="margin-bottom:14px">Steps</h3><ol class="num-list" id="steps"></ol></div>
+          <a class="btn-thread" id="serve-link" href="serve.html">Open in serve mode</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="rev-title">
+      <div class="wrap">
+        <div class="sec-head"><div><p class="accent accent--md">Testimonials</p><h2 class="h2" id="rev-title">What customers say</h2><p class="small muted" style="margin:0">From rendangpaknil.com, in BM with an English line.</p></div><button class="btn btn--dark" type="button" id="write-rev">Write a review</button></div>
+        <div class="reviews" id="rev-list"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0" aria-labelledby="pair-title">
+      <div class="wrap">
+        <div class="sec-head"><div><h2 class="h2" id="pair-title">Pairs well with</h2></div><a class="link-arrow" href="shop.html">All nine menus<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div class="product-grid" id="pairs"></div>
+      </div>
+    </section>
+
+    <div class="sticky-buy" id="sticky-buy" aria-hidden="true">
+      <div class="wrap"><img id="sb-img" src="assets/img/packs/minang-sm.webp" alt=""><div><b id="sb-name">Rendang Minang</b><span class="small muted" id="sb-price">RM48.00</span></div>
+        <button class="btn" type="button" id="sb-add"><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>Add to cart</button></div>
+    </div>
+  </main>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/vendor/qrcode.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/chat.js"></script>
+  <script src="assets/js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Agent portal | Rendang Pak Nil (concept)</title>
+  <meta name="description" content="Concept of a Rendang Pak Nil agent portal: reorder stock, agent price tiers and invoices. Sample data.">
+  <meta name="theme-color" content="#5C0F1F">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="agent">
+  <script src="assets/js/icons.js"></script>
+
+  <main id="main">
+    <section class="login" id="login-view">
+      <div class="login__art"><div><p class="accent accent--md">Portal agen</p><h1 class="h2">Reorder in one tap. See your agent price.</h1><p style="margin:0;opacity:.9">For agents, kedai and caterers who restock Rendang Pak Nil every month.</p></div></div>
+      <form class="login__form" id="login-form">
+        <span class="tag tag--gold">Demo account, sample data</span>
+        <h2 class="h2">Sign in</h2>
+        <div class="field"><label for="l-phone">WhatsApp number</label><input class="input" id="l-phone" type="tel" value="+60 12-345 6789" autocomplete="username"></div>
+        <div class="field"><label for="l-pass">Password</label><input class="input" id="l-pass" type="password" value="demo-password" autocomplete="current-password"></div>
+        <button class="btn" type="submit"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Sign in</button>
+        <p class="small muted" style="margin:0">Not an agent yet? <a href="agent.html#apply" style="font-weight:700;color:var(--istana)">Apply in two minutes</a></p>
+      </form>
+    </section>
+
+    <section class="portal" id="portal-view" hidden>
+      <nav class="portal__side" aria-label="Agent portal">
+        <a href="#overview" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg>Overview</a>
+        <a href="#reorder"><svg class="icon" aria-hidden="true"><use href="#i-repeat"/></svg>Order again</a>
+        <a href="#prices"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg>Agent prices</a>
+        <a href="#invoices"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Orders &amp; invoices</a>
+        <a href="#kit"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Marketing kit</a>
+        <a href="#" id="logout"><svg class="icon" aria-hidden="true"><use href="#i-logout"/></svg>Sign out</a>
+      </nav>
+      <div class="portal__main">
+        <div id="overview" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:end">
+          <div><span class="tag tag--gold">Sample data</span><h1 class="h2" style="margin-top:10px">Selamat pagi, Kedai Mak Teh</h1><p class="muted" style="margin:6px 0 0">Agent 0482, Gombak. Payment: on delivery or 14 days.</p></div>
+          <span class="tag tag--cili" style="font-size:14px;padding:10px 14px"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span id="tier-name">Ejen Perak: 20–49 packs a month</span></span>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><b id="k-month">34</b><span>packs this month</span></div>
+          <div class="kpi"><b id="k-next">16</b><span>packs to Ejen Emas</span></div>
+          <div class="kpi"><b id="k-margin">RM0</b><span>your margin at shop prices</span></div>
+          <div class="kpi"><b>Thu</b><span>next frozen delivery</span></div>
+        </div>
+
+        <div class="panel" id="reorder" style="padding:24px">
+          <div class="sec-head" style="margin-bottom:16px"><div><h2 class="h3">Order again</h2><p class="small muted" style="margin:0">Your September order. Change quantities, then reorder.</p></div><b class="fl-price" id="ro-total" style="font-size:42px;color:var(--istana)">RM0</b></div>
+          <table class="table" id="ro-table"><thead><tr><th>Menu</th><th>Packs</th><th>Agent price</th><th>Line total</th></tr></thead><tbody></tbody></table>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;align-items:center"><button class="btn" type="button" id="ro-go"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg>Reorder now</button><span class="small muted">Packed frozen in Selayang, delivered on Thursday.</span></div>
+        </div>
+
+        <div class="panel" id="prices" style="padding:24px">
+          <div class="sec-head" style="margin-bottom:16px"><div><h2 class="h3">Agent prices</h2><p class="small muted" style="margin:0">Sample tiers for the demo; Rumpun Selera sets the real ones.</p></div><button class="btn btn--sm btn--ghost" type="button" data-dl><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download price list</button></div>
+          <table class="table" id="tier-table"><thead><tr><th>Menu</th><th>Shop price</th><th>Ejen Gangsa<br><span class="small" style="font-weight:500">1–19 packs</span></th><th>Ejen Perak<br><span class="small" style="font-weight:500">20–49 packs</span></th><th>Ejen Emas<br><span class="small" style="font-weight:500">50+ packs</span></th></tr></thead><tbody></tbody></table>
+        </div>
+
+        <div class="panel" id="invoices" style="padding:24px">
+          <h2 class="h3" style="margin-bottom:16px">Orders &amp; invoices</h2>
+          <table class="table"><thead><tr><th>Order</th><th>Date</th><th>Packs</th><th>Status</th><th></th></tr></thead><tbody>
+            <tr><td>AG-26-0931</td><td>18 Sep 2026</td><td>34</td><td><span class="status">Delivered</span></td><td><button class="btn btn--sm btn--ghost" type="button" data-dl>Invoice</button></td></tr>
+            <tr><td>AG-26-0874</td><td>21 Aug 2026</td><td>28</td><td><span class="status">Paid</span></td><td><button class="btn btn--sm btn--ghost" type="button" data-dl>Invoice</button></td></tr>
+            <tr><td>AG-26-0802</td><td>24 Jul 2026</td><td>22</td><td><span class="status">Paid</span></td><td><button class="btn btn--sm btn--ghost" type="button" data-dl>Invoice</button></td></tr>
+          </tbody></table>
+        </div>
+
+        <div class="panel" id="kit" style="padding:24px">
+          <h2 class="h3" style="margin-bottom:6px">Marketing kit</h2>
+          <p class="small muted" style="margin:0 0 16px">Photos and reels agents can post. From Rendang Pak Nil’s own shoots.</p>
+          <div class="expos" id="kit-grid"></div>
+        </div>
+
+        <div class="trade" style="max-width:660px">
+          <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+          <p><b>Your account manager</b>Questions about stock, delivery or Raya pre-orders? Message the team on WhatsApp.</p>
+          <a class="btn btn--sm btn--gold" href="https://wa.me/601169825208" target="_blank" rel="noopener">Message</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/vendor/qrcode.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/chat.js"></script>
+  <script src="assets/js/portal.js"></script>
+</body>
+</html>
