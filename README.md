@@ -4,6 +4,12 @@ Two alternative websites for Rendang Pak Nil (Rumpun Selera Enterprise, Batu Cav
 
 This round is tuned for desktop and laptop screens (1280 to 1920 px wide). Phone layouts work and were spot-checked at 390 px; a full phone pass follows once a concept is chosen.
 
+## Live
+
+- **Chooser (both concepts):** <https://23f3000111.github.io/rendang-pak-nil-concepts/>
+- **Concept A, Citarasa Istana:** <https://23f3000111.github.io/rendang-pak-nil-concepts/site-a-citarasa-istana/>
+- **Concept B, Ingat Rendang, Ingat Pak Nil!:** <https://23f3000111.github.io/rendang-pak-nil-concepts/site-b-ingat-rendang/>
+
 ## Open it locally
 
 - Double-click `index.html` in this folder. It is a chooser page that links to both concepts.
