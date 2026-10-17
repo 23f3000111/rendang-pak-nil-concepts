@@ -57,8 +57,6 @@
 .stage__pack--3 { left: 22%; bottom: 7%; rotate: -6deg; z-index: 3; }
 .stage__pack--1 { left: 40%; bottom: 0; width: 29%; rotate: 1deg; z-index: 5; }
 .stage__pack--4 { left: 67%; bottom: 4%; rotate: 11deg; z-index: 4; }
-.stage__sticker { position: absolute; z-index: 7; right: 2%; top: 10%; display: grid; place-items: center; align-content: center; width: clamp(92px, 9vw, 124px); aspect-ratio: 1; border: 3px solid var(--ink); border-radius: 50%; background: var(--cili); color: #fff; font: 800 15px/1 var(--f-body); text-align: center; rotate: 10deg; box-shadow: var(--hard-s); }
-.stage__sticker b { display: block; font: 400 clamp(40px, 4vw, 54px)/.9 var(--f-display); }
 .hero__hint { position: absolute; z-index: 2; left: 50%; bottom: 26px; translate: -50% 0; display: flex; align-items: center; gap: 8px; font: 400 22px/1 var(--f-hand); color: var(--ink-2); white-space: nowrap; pointer-events: none; }
 .hero__hint svg { width: 44px; color: var(--cili); rotate: 200deg; }
 

@@ -326,7 +326,6 @@
       .from('.stage__sun', { scale: 0, rotate: -90, duration: 1.2, ease: 'back.out(1.4)' }, 0.1)
       .from('.stage__paknil', { y: 200, opacity: 0, duration: 1.1, ease: 'back.out(1.3)' }, 0.25)
       .from('.stage__pack', { y: 240, opacity: 0, duration: 1.1, ease: 'back.out(1.3)', stagger: 0.12 }, 0.4)
-      .from('.stage__sticker', { scale: 0, rotate: -40, duration: 0.8, ease: 'back.out(2.4)' }, 1.2)
       .from('.hero__hint', { opacity: 0, y: 12, duration: 0.6 }, 1.8);
     $$('.stage__pack').forEach(function (p, i) { gsap.to(p, { y: i % 2 ? -10 : -16, duration: 2.4 + i * 0.35, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1.8 + i * 0.2 }); });
     gsap.to('.stage__sun', { rotate: 360, duration: 60, ease: 'none', repeat: -1 });

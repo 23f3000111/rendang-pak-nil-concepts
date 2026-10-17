@@ -43,6 +43,9 @@ Every decision taken on the client's behalf while building both concepts. Each l
 - B: Ruling: like ABIN, the contact map is the Google Maps embed (A keeps Leaflet with OpenStreetMap) — cost if wrong: one iframe.
 - Content: Ruling: shared data gained `tagBm` (a short BM line per menu, taken from each menu's own BM copy) and `agent.roles` (four agent roles for B's pop-ups); A ignores both — cost if wrong: none.
 - Assets: Ruling: images and the extra clip that no page of a site uses were deleted from that site (28 files in A, 34 in B); the reels listed in shared data stay in both sites because the data test requires every data path in both — cost if wrong: re-run tools/assets.py.
+- B: User direction (17 Oct): removed the red "5 minit" sticker from the hero (markup, styles and its entrance animation). "Siap 5 minit" stays in the trust row, the marquee and the timer.
+- A: User direction (17 Oct): on a 1366 × 768 laptop (a viewport about 630 px tall) the nine-menu showcase overlapped: the menu name ran under "Nine menus", the price and buttons under the menu chips, and the video window over the counter. Fix: the label, the menu and the chips are now separate grid rows; the name, alt line, description, price and chips scale with window height; the window, pack and ring take their size from the row; the three fact pills hide below 780 px of height; an accidental 25 px paragraph margin under the name was removed. Checked for all nine menus in EN and BM from 1280 × 540 to 2560 × 1300, plus phone and tablet.
+- Setup: Ruling: the changed stylesheet and script links carry `?v=2` so browsers (GitHub Pages caches for 10 minutes) load the fix instead of a stale copy — bump the number on the next change to those files — cost if wrong: none.
 
 ## Deferred minor issues
 
